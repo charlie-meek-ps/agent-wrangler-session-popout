@@ -1,0 +1,27 @@
+{
+  "name": "agent-wrangler-session-popout",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Open Agent Wrangler sessions in movable terminal windows.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charlie-meek-ps/agent-wrangler-session-popout.git"
+  },
+  "homepage": "https://github.com/charlie-meek-ps/agent-wrangler-session-popout#readme",
+  "bugs": { "url": "https://github.com/charlie-meek-ps/agent-wrangler-session-popout/issues" },
+  "engines": { "node": ">=20" },
+  "keywords": ["agent-wrangler", "agent-wrangler-extension", "terminal", "popout"],
+  "scripts": { "test": "node --test" },
+  "wranglerExtension": {
+    "id": "session-popout",
+    "label": "Session pop-out",
+    "description": "Open live agent terminals in separate windows without restarting their sessions.",
+    "author": "Charlie Meek",
+    "homepage": "https://github.com/charlie-meek-ps/agent-wrangler-session-popout",
+    "requires": [],
+    "keybindings": [{ "combo": "ctrl+cmd+o", "scope": "board" }],
+    "engines": { "wranglerApi": "^1.31.0" }
+  }
+}

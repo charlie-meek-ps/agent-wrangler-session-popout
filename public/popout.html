@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Session · Agent Wrangler</title>
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/css/xterm.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="./popout.css">
+</head>
+<body>
+  <header>
+    <div class="heading">
+      <strong id="title">Session</strong>
+      <span id="status" role="status" data-state="connecting" title="Connecting">
+        <span class="status-dot" aria-hidden="true"></span><span id="status-text">Connecting…</span>
+      </span>
+    </div>
+    <button id="retry" class="retry-button" type="button" hidden>Retry</button>
+    <button id="board" class="icon-button" type="button" aria-label="Return to board" title="Return to board">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14 4H4v16h16V10"/><path d="m20 4-10 10m0-6v6h6"/>
+      </svg>
+    </button>
+  </header>
+  <main><div id="terminal" aria-label="Agent terminal"></div></main>
+  <script src="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/lib/xterm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@xterm/addon-fit@0.10.0/lib/addon-fit.js"></script>
+  <script src="/vendor/addon-web-links.min.js"></script>
+  <script src="/vendor/addon-clipboard.min.js"></script>
+  <script src="/vendor/addon-unicode11.min.js"></script>
+  <script type="module" src="./popout.js"></script>
+</body>
+</html>
